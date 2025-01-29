@@ -1,9 +1,7 @@
 /* Importando fontes do Google */
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 /* variaveis */
-
 :root {
     /* Cores principais */
     --primary-color: #4a9172;
@@ -27,9 +25,7 @@
     --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-
 /*  Base */
-
 * {
     margin: 0;
     padding: 0;
@@ -92,8 +88,6 @@ button:hover, .btn:hover {
     background-color: var(--hover-color);
 }
 
-
-/* layout  */
 /* layout  */
 header {
     position: relative;
@@ -134,8 +128,7 @@ header .navbar a:hover, .navbar .home-active {
     transition: 0.5s;
     
 }
-
-    
+ 
 footer {
     clear: both;
     background-color: var(--footer-color);
@@ -148,7 +141,6 @@ footer {
     font-size: 0.9rem;
     min-height: 100px;
 }
-
 
 footer .footer-container {
     display: flex;
@@ -177,7 +169,6 @@ footer .footer-links li a:hover {
     color: var(--background-color);
 }
 
-
 /* componentes reutilizaveis  */
 
 .btn {
@@ -192,7 +183,6 @@ footer .footer-links li a:hover {
     font-size: 20px;
     margin: auto;
 }
-
 
 .card, .box {
     z-index: 1; 
@@ -217,7 +207,6 @@ footer .footer-links li a:hover {
     box-shadow: var(--hover-shadow);
 }
 
-
 .card img, .box img {
     position: absolute;
     top: 0;
@@ -227,7 +216,6 @@ footer .footer-links li a:hover {
     object-fit: cover;
     border-radius: var(--border-radius);
 }
-
 
 .card a, .box a {
     display: block;
@@ -250,11 +238,6 @@ footer .footer-links li a:hover {
     max-width: 1200px; 
 }
 
-
-
-
-
-
 /* paginas */
 
 /* Pagina 1 */
@@ -264,6 +247,22 @@ footer .footer-links li a:hover {
     object-fit: contain; /* Mantém a imagem dentro do contêiner sem cortar */
     border-radius: var(--border-radius);
     margin-bottom: 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container.swiper-button-prev{
+    position: absolute;
+    top:50%;
+}
+
+.slider-container.swiper-button-prev{
+    position: absolute;
+    top:50%;    
 }
 
 #home {
@@ -303,7 +302,6 @@ footer .footer-links li a:hover {
     margin-bottom: 0%;
     background-size: cover;
 }
-
 
 .container img {
     max-width: 80%; /* Limita a largura da imagem */
