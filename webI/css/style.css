@@ -9,7 +9,7 @@
     --text-color: #000000;
     --background-color: #ffffff;
     --footer-color: #3F403F;
-    --hover-color: #00bcd4;
+    --hover-color: #000000;
 
     /* Fontes */
     --font-primary: 'Poppins', sans-serif;
@@ -148,8 +148,8 @@ footer .footer-container {
     flex-wrap: wrap;
     gap: var(--spacing);
     max-width: var(--container-width);
-    margin: 0 auto; /* Centraliza o conteúdo do footer */
-    width: 100%; /* Garante que o conteúdo não seja cortado */
+    margin: 0 auto; 
+    width: 100%; 
 }
 
 footer .footer-container div {
@@ -161,12 +161,18 @@ footer .footer-container h3 {
     color: var(--background-color);
 }
 
+footer .bx {
+    color: var(--background-color);
+    font-size: 20px; /* Ou transform: scale(1.2); */
+    margin: 0 10px; /* Adiciona espaço entre os ícones */
+}
+
 footer .footer-links ul {
     padding: 0;
 }
 
 footer .footer-links li a:hover {
-    color: var(--background-color);
+    color:#fffdfd;
 }
 
 /* componentes reutilizaveis  */
