@@ -429,7 +429,6 @@ footer .footer-links li a:hover {
     color: var(--acqua-color);
 }
 
-
 /* pag 3 fomrulario */
 /* Formulário de Sugestões */
 .form-sugestao {
@@ -507,4 +506,37 @@ footer .footer-links li a:hover {
 .mensagem-agradecimento.ativo {
     display: block;
     background-color: #000000;
+}
+
+/* pagina simulado */
+
+.small-card {
+    width: 200px;  
+    min-height: 150px;  
+    padding: 10px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.small-card h2 {
+    font-size: 1.2rem;
+}
+
+.small-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--secondary-color); /* Usa a cor secundária já definida */
+    box-shadow: var(--hover-shadow);
+}
+
+/* pagina css, html, jss */
+
+.content, .quiz {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.question {
+    text-align: left;
+    margin-bottom: 10px;
 }

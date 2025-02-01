@@ -26,39 +26,56 @@
         <li><a href="atividades.html">Simulados </a></li>   
     </ul>
 </header>
-<main>
-    <!-- Seção de Questões Rápidas -->
-    <section class="questoes-container">
-        <h2>Questões Rápidas</h2>
-        <div id="questoes"></div>
-        <button class="btn" onclick="conferirQuestoes()">Conferir Respostas</button>
-        <div id="questoes-resultado" class="hidden"></div>
-    </section>
-    
-    <!-- Seção de Simulados -->
-    <section class="explorar-container">
-        <h2>Simulados</h2>
-        <div class="card small-card" onclick="startQuiz('javascript')">
-            <h2>Sobre JavaScript</h2>
-        </div>
-        <div class="card small-card" onclick="startQuiz('html')">
-            <h2>Sobre HTML</h2>
-        </div>
-        <div class="card small-card" onclick="startQuiz('css')">
-            <h2>Sobre CSS</h2>
-        </div>
-    </section>
-    
-    <!-- Seção do Quiz -->
-    <section id="quiz-container" class="hidden">
-        <h2 id="quiz-title"></h2>
-        <div id="quiz-questions"></div>
-        <button class="btn" onclick="submitQuiz()">Finalizar</button>
-        <div id="quiz-result" class="hidden"></div>
-    </section>
-</main>
-<script src="script.js"></script>
+<section class="content">
+    <h2>O que é CSS?</h2>
+    <p>TEXTO.</p>
+    <p>MAIS TEXTO.</p>
+</section>
 
+<section class="quiz">
+    <h2>Mini Simulado de css</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1.</p>
+            <label><input type="radio" name="q1" value="a"> alternativa 1 </label>
+            <label><input type="radio" name="q1" value="b"> alternativa 2</label>
+            <label><input type="radio" name="q1" value="c"> alternativa 3 </label>
+        </div>
+        <div class="question">
+            <p>2. </p>
+            <label><input type="radio" name="q2" value="a"> alternativa1 </label>
+            <label><input type="radio" name="q2" value="b"> alternativa 2</label>
+            <label><input type="radio" name="q2" value="c"> alternativa 3 </label>
+        </div>
+        <div class="question">
+            <p>3.</p>
+            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
+            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
+            <label><input type="radio" name="q3" value="c">alternativa 3</label>
+        </div>
+        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+    <p id="resultado"></p>
+</section>
+
+<!-- respostas página CSS -->
+<script>
+    // Respostas corretas para esta página
+    const respostasCorretas = { q1: "a", q2: "b", q3: "c" };
+
+    function verificarRespostas() {
+      let acertos = 0;
+
+      for (let q in respostasCorretas) {
+          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+          if (selecionado && selecionado.value === respostasCorretas[q]) {
+              acertos++;
+          }
+      }
+
+      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+    }
+  </script>
 
  </section>
 <footer class="site-footer">

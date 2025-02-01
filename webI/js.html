@@ -26,41 +26,60 @@
         <li><a href="atividades.html">Simulados </a></li>   
     </ul>
 </header>
-<main>
-    <!-- Seção de Questões Rápidas -->
-    <section class="questoes-container">
-        <h2>Questões Rápidas</h2>
-        <div id="questoes"></div>
-        <button class="btn" onclick="conferirQuestoes()">Conferir Respostas</button>
-        <div id="questoes-resultado" class="hidden"></div>
-    </section>
-    
-    <!-- Seção de Simulados -->
-    <section class="explorar-container">
-        <h2>Simulados</h2>
-        <div class="card small-card" onclick="startQuiz('javascript')">
-            <h2>Sobre JavaScript</h2>
-        </div>
-        <div class="card small-card" onclick="startQuiz('html')">
-            <h2>Sobre HTML</h2>
-        </div>
-        <div class="card small-card" onclick="startQuiz('css')">
-            <h2>Sobre CSS</h2>
-        </div>
-    </section>
-    
-    <!-- Seção do Quiz -->
-    <section id="quiz-container" class="hidden">
-        <h2 id="quiz-title"></h2>
-        <div id="quiz-questions"></div>
-        <button class="btn" onclick="submitQuiz()">Finalizar</button>
-        <div id="quiz-result" class="hidden"></div>
-    </section>
-</main>
-<script src="script.js"></script>
 
+<section class="content">
+    <h2>O que é JavaScript?</h2>
+    <p>JavaScript é uma linguagem de programação amplamente utilizada para desenvolvimento web. Com ela, é possível criar interações dinâmicas em páginas HTML, controlar elementos e responder a eventos do usuário.</p>
+    <p>JavaScript é essencial para o desenvolvimento front-end e também pode ser usado no back-end com o Node.js.</p>
+</section>
+
+<section class="quiz">
+    <h2>Mini Simulado de JavaScript</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Qual comando exibe uma mensagem no console do navegador?</p>
+            <label><input type="radio" name="q1" value="a"> alert()</label>
+            <label><input type="radio" name="q1" value="b"> console.log()</label>
+            <label><input type="radio" name="q1" value="c"> document.write()</label>
+        </div>
+        <div class="question">
+            <p>2. Qual palavra-chave é usada para declarar uma variável em JavaScript?</p>
+            <label><input type="radio" name="q2" value="a"> var</label>
+            <label><input type="radio" name="q2" value="b"> let</label>
+            <label><input type="radio" name="q2" value="c"> Ambas</label>
+        </div>
+        <div class="question">
+            <p>3. Como se escreve um comentário de linha única em JavaScript?</p>
+            <label><input type="radio" name="q3" value="a"> /* Comentário */</label>
+            <label><input type="radio" name="q3" value="b"> // Comentário</label>
+            <label><input type="radio" name="q3" value="c">&lt;!-- Comentário --&gt;</label>
+        </div>
+        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+    <p id="resultado"></p>
+</section>
 
  </section>
+
+<!-- respostas página js -->
+
+<script>
+    const respostasCorretas = { q1: "b", q2: "c", q3: "b" };
+
+    function verificarRespostas() {
+      let acertos = 0;
+
+      for (let q in respostasCorretas) {
+          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+          if (selecionado && selecionado.value === respostasCorretas[q]) {
+              acertos++;
+          }
+      }
+
+      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+    }
+  </script>
+
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-about">
