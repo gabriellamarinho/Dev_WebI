@@ -114,6 +114,7 @@ header .navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 header .navbar a {
@@ -169,11 +170,17 @@ footer .bx {
 
 footer .footer-links ul {
     padding: 0;
+    color: #ffffff;
+}
+.footer-links .navbar li a {
+    color: white; 
+    text-decoration: none; 
 }
 
-footer .footer-links li a:hover {
-    color:#fffdfd;
+.footer-links .navbar li a:hover {
+    color: black; 
 }
+
 
 /* componentes reutilizaveis  */
 
