@@ -10,6 +10,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- Link Swiper's CSS e box icon -->
+    <style>
+        h1{
+            font-size: 45px;
+            color: #333;
+        }
+        #paragrafo {
+            font-family: Arial, sans-serif; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            text-align: justify; 
+            color: #333; 
+            margin: 20px 0;
+            text-indent: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            margin: 10px 0; 
+        }
+        a:hover {
+            color: #45a049; 
+        }
+    </style>
 </head>
 
 <body>
@@ -31,28 +57,60 @@
     </ul>
 </header>
 <section class="content">
-    <h2>O que é HTML?</h2>
-    <p>TEXTO.</p>
-    <p>MAIS TEXTO.</p>
+    <br>
+    <h1>O que é HTML?</h1>
+    <p  id ="paragrafo">O HTML (HyperText Markup Language) é a linguagem fundamental para a criação de páginas web, fornecendo a estrutura necessária para exibir conteúdo na internet. Desenvolvido por Tim Berners-Lee em 1991, o HTML evoluiu ao longo dos anos, com a versão mais recente sendo o HTML5, que introduziu recursos avançados para suportar multimídia, gráficos vetoriais e APIs para geolocalização, entre outros.
+    <h3> Estrutura Básica de um Documento HTML</h3>
+    <p  id ="paragrafo">Um documento HTML é composto por elementos que definem a organização e a apresentação do conteúdo. Esses elementos são representados por tags, que indicam o início e o fim de cada componente. A estrutura básica inclui:
+    <br>
+    <br>
+    <img src="imagens/exemplo.html.png" >
+    <br>
+    <p> Outro detalhe importante é que sempre ao abrir uma tag ela deverá ser fechada , por exemplo:
+        <h4> &lt;p&gt; exemplo &lt;/p&gt;</h4>
+    As tags mais comumente usadas :</p>
+    <br>
+
+    <img src="imagens/htmltags.png">
+    <br>
+    <p id ="paragrafo">Para aprofundar-se no estudo do HTML, o <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a> oferece tutoriais abrangentes e exemplos práticos que cobrem desde os conceitos básicos até técnicas avançadas.</p>
+    <br>
+    <br>
+
+    <h4><strong>Referências</strong></h4>
+    <ul>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">W3Schools - HTML Basic Examples</a></li>
+        <li><a href="https://www.w3schools.com/html/html_links.asp" target="_blank">W3Schools - HTML Links</a></li>
+        <li><a href="https://www.w3schools.com/html/html_editor.asp" target="_blank">W3Schools - HTML Editor</a></li>
+        <li><a href="https://www.w3schools.com/TAGs/" target="_blank">W3Schools - HTML Element Reference</a></li>
+    </ul>
+    </p>
 </section>
 
 <section class="quiz">
     <h2>Mini Simulado de HTML</h2>
     <form id="quizForm">
         <div class="question">
-            <p>1.</p>
+            <p p id ="paragrafo">1.</p>
             <label><input type="radio" name="q1" value="a"> alternativa 1 </label>
             <label><input type="radio" name="q1" value="b"> alternativa 2</label>
             <label><input type="radio" name="q1" value="c"> alternativa 3 </label>
         </div>
         <div class="question">
-            <p>2. </p>
+            <p id ="paragrafo">2. </p>
             <label><input type="radio" name="q2" value="a"> alternativa1 </label>
             <label><input type="radio" name="q2" value="b"> alternativa 2</label>
             <label><input type="radio" name="q2" value="c"> alternativa 3 </label>
         </div>
         <div class="question">
-            <p>3.</p>
+            <p id ="paragrafo">3.</p>
+            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
+            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
+            <label><input type="radio" name="q3" value="c">alternativa 3</label>
+        </div>
+        <div class="question">
+            <p id ="paragrafo">3.</p>
             <label><input type="radio" name="q3" value="a"> alternativa1 </label>
             <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
             <label><input type="radio" name="q3" value="c">alternativa 3</label>
@@ -64,8 +122,7 @@
 
 <!-- resposta página HTML  -->
 <script>
-    // Respostas corretas para esta página
-    const respostasCorretas = { q1: "a", q2: "b", q3: "c" };
+    const respostasCorretas = { q1: "a", q2: "b", q3: "c",q4: "a" };
 
     function verificarRespostas() {
       let acertos = 0;
@@ -124,5 +181,3 @@
 
 </body>
 </html>
-
-
