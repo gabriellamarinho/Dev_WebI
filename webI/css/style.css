@@ -553,3 +553,24 @@ footer .footer-links ul {
     text-align: left;
     margin-bottom: 10px;
 }
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+#refazer {
+    display: block;
+    margin: 20px auto;
+    background-color: rgb(67, 157, 138);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#refazer:hover {
+    background-color: #333;
+}

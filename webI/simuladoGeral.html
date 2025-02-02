@@ -27,116 +27,103 @@
     </ul>
 </header>
 <body>
-    <h1>Simulado Geral</h1>
-    <div class="timer">Tempo: <span id="tempo">00:00</span></div>
+  <h1>Simulado Geral</h1>
   
-    <section class="quiz">
-        <h2>Mini Simulado de JavaScript</h2>
-        <form id="quizForm">
-            <div class="question">
-                <p>1. Qual comando exibe uma mensagem no console do navegador?</p>
-                <label><input type="radio" name="q1" value="a"> alert()</label>
-                <label><input type="radio" name="q1" value="b"> console.log()</label>
-                <label><input type="radio" name="q1" value="c"> document.write()</label>
-            </div>
-            <div class="question">
-                <p>2. Qual palavra-chave é usada para declarar uma variável em JavaScript?</p>
-                <label><input type="radio" name="q2" value="a"> var</label>
-                <label><input type="radio" name="q2" value="b"> let</label>
-                <label><input type="radio" name="q2" value="c"> Ambas</label>
-            </div>
-            <div class="question">
-                <p>3. Como se escreve um comentário de linha única em JavaScript?</p>
-                <label><input type="radio" name="q3" value="a"> /* Comentário */</label>
-                <label><input type="radio" name="q3" value="b"> // Comentário</label>
-                <label><input type="radio" name="q3" value="c">&lt;!-- Comentário --&gt;</label>
-            </div>
-            <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
-        </form>
-        <p id="resultado"></p>
-    </section>
-  
-    <button onclick="verificarRespostas()">Finalizar Simulado</button>
-    <div id="resultado"></div>
+  <section class="quiz">
+      <h2>Mini Simulado de JavaScript</h2>
+      <form id="quizForm">
+          <div class="question">
+              <p>1. Qual comando exibe uma mensagem no console do navegador?</p>
+              <label><input type="radio" name="q1" value="a"> alert()</label>
+              <label><input type="radio" name="q1" value="b"> console.log()</label>
+              <label><input type="radio" name="q1" value="c"> document.write()</label>
+          </div>
+          <div class="question">
+              <p>2. Qual palavra-chave é usada para declarar uma variável em JavaScript?</p>
+              <label><input type="radio" name="q2" value="a"> var</label>
+              <label><input type="radio" name="q2" value="b"> let</label>
+              <label><input type="radio" name="q2" value="c"> Ambas</label>
+          </div>
+          <div class="question">
+              <p>3. Como se escreve um comentário de linha única em JavaScript?</p>
+              <label><input type="radio" name="q3" value="a"> /* Comentário */</label>
+              <label><input type="radio" name="q3" value="b"> // Comentário</label>
+              <label><input type="radio" name="q3" value="c">&lt;!-- Comentário --&gt;</label>
+          </div>
+          <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+      </form>
+      <p id="resultado"></p>
+  </section>
 
+  <button id="refazer" onclick="refazerSimulado()" style="display:none,;">Refazer</button>
+  <div id="resultado"></div>
 
+</section>
 
- </section>
+<style>
+  .correto { color: green; font-weight: bold; }
+  .errado { color: red; font-weight: bold; }
+</style>
 
 <!-- respostas página js -->
- <script>
-// Respostas corretas (pode ser expandido conforme necessário)
+<script>
+// Respostas corretas
 const respostasCorretas = {
-  q1: "b",
-  q2: "c",
-  q3: "a",
-  q4: "b",
-  q5: "c",
-  q6: "a",
-  q7: "b",
-  q8: "c",
-  q9: "a",
-  q10: "b"
+q1: "b",
+q2: "c",
+q3: "b"
 };
-
-// Timer
-let tempoInicial;
-let intervalo;
-const tempoElemento = document.getElementById("tempo");
-
-function iniciarTimer() {
-  tempoInicial = Date.now();
-  intervalo = setInterval(atualizarTimer, 1000);
-}
-
-function atualizarTimer() {
-  const tempoAtual = Date.now() - tempoInicial;
-  const minutos = Math.floor(tempoAtual / 60000);
-  const segundos = Math.floor((tempoAtual % 60000) / 1000);
-  tempoElemento.textContent = `${minutos.toString().padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
-}
-
-// Gerar questões dinamicamente
-function gerarQuestoes() {
-  const form = document.getElementById("simulado");
-  for (let i = 1; i <= Object.keys(respostasCorretas).length; i++) {
-    const questao = `
-      <div class="question">
-        <p>Questão ${i}: Qual é a resposta correta?</p>
-        <label><input type="radio" name="q${i}" value="a"> Resposta A</label>
-        <label><input type="radio" name="q${i}" value="b"> Resposta B</label>
-        <label><input type="radio" name="q${i}" value="c"> Resposta C</label>
-      </div>
-    `;
-    form.insertAdjacentHTML("beforeend", questao);
-  }
-}
 
 // Verificar respostas
 function verificarRespostas() {
-  clearInterval(intervalo); // Para o timer
-  let acertos = 0;
+let acertos = 0;
 
-  for (let q in respostasCorretas) {
-    const selecionado = document.querySelector(`input[name="${q}"]:checked`);
-    if (selecionado && selecionado.value === respostasCorretas[q]) {
+for (let q in respostasCorretas) {
+  const selecionado = document.querySelector(`input[name="${q}"]:checked`);
+  const labels = document.querySelectorAll(`input[name="${q}"]`);
+  
+  labels.forEach(label => {
+    label.parentElement.classList.remove("correto", "errado");
+  });
+  
+  if (selecionado) {
+    if (selecionado.value === respostasCorretas[q]) {
       acertos++;
+      selecionado.parentElement.classList.add("correto");
+    } else {
+      selecionado.parentElement.classList.add("errado");
     }
   }
-
-  const totalQuestoes = Object.keys(respostasCorretas).length;
-  const tempoFinal = tempoElemento.textContent;
-  document.getElementById("resultado").innerHTML = `
-    Você acertou ${acertos} de ${totalQuestoes} questões.<br>
-    Tempo gasto: ${tempoFinal}
-  `;
 }
 
-// Iniciar o simulado
-window.onload = function () {
-  iniciarTimer();
-  gerarQuestoes();
-};
+const totalQuestoes = Object.keys(respostasCorretas).length;
+document.getElementById("resultado").innerHTML = `
+  Você acertou ${acertos} de ${totalQuestoes} questões.<br>
+`;
+
+// Desativar os inputs após a resposta
+document.querySelectorAll('input[type="radio"]').forEach(input => {
+  input.disabled = true;
+});
+
+// Exibir botão de refazer
+document.getElementById("refazer").style.display = "block";
+}
+
+// Função para refazer o simulado
+function refazerSimulado() {
+document.getElementById("quizForm").reset();
+document.getElementById("resultado").innerHTML = "";
+
+// Reativar os inputs
+document.querySelectorAll('input[type="radio"]').forEach(input => {
+  input.disabled = false;
+  input.parentElement.classList.remove("correto", "errado");
+});
+
+// Esconder botão de refazer
+document.getElementById("refazer").style.display = "none";
+}
 </script>
 
 <footer class="site-footer">
