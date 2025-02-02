@@ -93,6 +93,7 @@ button, .btn, #refazer {
 
 button:hover, .btn:hover, #refazer:hover {
     background-color: var(--hover-color);
+    color:#ffffff
 }
 
 
