@@ -5,7 +5,7 @@
 :root {
     /* Cores principais */
     
-    --primary-color: #4a9172;
+    --primary-color: #2379bb;
     --secondary-color: #b8f3d9;
     --text-color: #000000;
     --background-color: #ffffff;
@@ -172,8 +172,8 @@ footer .footer-container h3 {
 
 footer .bx {
     color: var(--background-color);
-    font-size: 20px; /* Ou transform: scale(1.2); */
-    margin: 0 10px; /* Adiciona espaço entre os ícones */
+    font-size: 20px; 
+    margin: 0 10px; 
 }
 
 footer .footer-links ul {
