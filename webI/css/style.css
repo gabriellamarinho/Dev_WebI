@@ -4,13 +4,18 @@
 /* variaveis */
 :root {
     /* Cores principais */
+    
     --primary-color: #4a9172;
     --secondary-color: #b8f3d9;
     --text-color: #000000;
     --background-color: #ffffff;
     --footer-color: #3F403F;
     --hover-color: #000000;
-
+    --margin-bottom: 1.5rem;
+    --padding: 10px;
+    
+    
+    
     /* Fontes */
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Host Grotesk', sans-serif;
@@ -48,6 +53,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-secondary);
     margin-bottom: var(--spacing);
+        text-align: center;
+    
+    
 }
 
 p {
@@ -71,22 +79,22 @@ img {
     margin: 0 auto;
 }
 
-button, .btn {
-    padding: 0.6rem 1rem;
+button, .btn, #refazer {
+    padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
     border-radius: var(--border-radius);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
     transition: background-color 0.3s ease;
 }
 
-button:hover, .btn:hover {
+button:hover, .btn:hover, #refazer:hover {
     background-color: var(--hover-color);
 }
+
 
 /* layout  */
 header {
@@ -552,25 +560,4 @@ footer .footer-links ul {
 .question {
     text-align: left;
     margin-bottom: 10px;
-}
-
-
-
-
-h1 {
-    text-align: center;
-}
-
-#refazer {
-    display: block;
-    margin: 20px auto;
-    background-color: rgb(67, 157, 138);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-#refazer:hover {
-    background-color: #333;
 }
