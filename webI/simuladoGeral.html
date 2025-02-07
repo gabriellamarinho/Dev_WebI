@@ -34,24 +34,73 @@
   <section class="quiz">
       <h2>Mini Simulado de JavaScript</h2>
       <form id="quizForm">
-          <div class="question">
-              <p>1. Qual comando exibe uma mensagem no console do navegador?</p>
-              <label><input type="radio" name="q1" value="a"> alert()</label>
-              <label><input type="radio" name="q1" value="b"> console.log()</label>
-              <label><input type="radio" name="q1" value="c"> document.write()</label>
-          </div>
-          <div class="question">
-              <p>2. Qual palavra-chave é usada para declarar uma variável em JavaScript?</p>
-              <label><input type="radio" name="q2" value="a"> var</label>
-              <label><input type="radio" name="q2" value="b"> let</label>
-              <label><input type="radio" name="q2" value="c"> Ambas</label>
-          </div>
-          <div class="question">
-              <p>3. Como se escreve um comentário de linha única em JavaScript?</p>
-              <label><input type="radio" name="q3" value="a"> /* Comentário */</label>
-              <label><input type="radio" name="q3" value="b"> // Comentário</label>
-              <label><input type="radio" name="q3" value="c">&lt;!-- Comentário --&gt;</label>
-          </div>
+        <div class="question">
+          <p><strong>Qual comando exibe uma mensagem no console do navegador?</strong></p>
+          <div><label><input type="radio" name="q1" value="a"> alert()</label></div>
+          <div><label><input type="radio" name="q1" value="b"> console.log()</label></div>
+          <div><label><input type="radio" name="q1" value="c"> document.write()</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Qual palavra-chave é usada para declarar uma variável em JavaScript?</strong></p>
+          <div><label><input type="radio" name="q2" value="a"> var</label></div>
+          <div><label><input type="radio" name="q2" value="b"> let</label></div>
+          <div><label><input type="radio" name="q2" value="c"> Ambas</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Como se escreve um comentário de linha única em JavaScript?</strong></p>
+          <div><label><input type="radio" name="q3" value="a"> /* Comentário */</label></div>
+          <div><label><input type="radio" name="q3" value="b"> // Comentário</label></div>
+          <div><label><input type="radio" name="q3" value="c"> &lt;!-- Comentário --&gt;</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Qual é o atributo usado no HTML para fazer referência a uma URL externa?</strong></p>
+          <div><label><input type="radio" name="q4" value="a"> object</label></div>
+          <div><label><input type="radio" name="q4" value="b"> href</label></div>
+          <div><label><input type="radio" name="q4" value="c"> Strong</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Para que um usuário do HTML5 consiga definir um conjunto de campos, qual tag deve ser utilizada?</strong></p>
+          <div><label><input type="radio" name="q5" value="a"> &lt;li&gt;</label></div>
+          <div><label><input type="radio" name="q5" value="b"> &lt;fieldset&gt;</label></div>
+          <div><label><input type="radio" name="q5" value="c"> &lt;a&gt;</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>O que o seguinte comando HTML faz?</strong></p>
+          <p>&lt;a href="https://example.com" target="_blank"&gt;Link&lt;/a&gt;</p>
+          <div><label><input type="radio" name="q6" value="a"> O documento abre no corpo inteiro da janela.</label></div>
+          <div><label><input type="radio" name="q6" value="b"> O link abre na própria página.</label></div>
+          <div><label><input type="radio" name="q6" value="c"> O documento abre em uma nova janela ou aba.</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>A tag &lt;option&gt;, quando utilizada em HTML5, é responsável por:</strong></p>
+          <div><label><input type="radio" name="q7" value="a"> Definir uma imagem.</label></div>
+          <div><label><input type="radio" name="q7" value="b"> Definir uma área ou seção.</label></div>
+          <div><label><input type="radio" name="q7" value="c"> Definir uma opção em uma lista suspensa.</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong> Qual a função principal do CSS em uma página web?</strong></p>
+          <div><label><input type="radio" name="q8" value="a"> Definir a estrutura semântica do conteúdo</label></div>
+          <div><label><input type="radio" name="q8" value="b"> Controlar a aparência visual dos elementos HTML</label></div>
+          <div><label><input type="radio" name="q8" value="c"> Definir as interações dinâmicas com o usuário Definir uma imagem.</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong>. Qual seletor CSS é utilizado para aplicar estilos a todos os elementos de uma determinada classe?</strong></p>
+          <div><label><input type="radio" name="q9" value="a"> #nomeClasse</label></div>
+          <div><label><input type="radio" name="q9" value="b"> .nomeClasse</label></div>
+          <div><label><input type="radio" name="q9" value="c"> *nomeClasse</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong> Qual propriedade CSS é utilizada para definir a distância entre as bordas de um elemento e o conteúdo dentro dele?</strong></p>
+          <div><label><input type="radio" name="q10" value="a"> padding</label></div>
+          <div><label><input type="radio" name="q10" value="b"> margin</label></div>
+          <div><label><input type="radio" name="q10" value="c"> border</label></div>
+        </div>
           <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
       </form>
       <p id="resultado"></p>
@@ -69,11 +118,19 @@
 
 <!-- respostas página js -->
 <script>
-// Respostas corretas
 const respostasCorretas = {
 q1: "b",
 q2: "c",
-q3: "b"
+q3: "b",
+q4:"b",
+q5:"b",
+q6:"c",
+q7:"c",
+q8:"b",
+q9:"b",
+q10:"c",
+
+
 };
 
 // Verificar respostas

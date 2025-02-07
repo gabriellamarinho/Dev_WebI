@@ -55,33 +55,77 @@
 </header>
 <section class="content">
     <br>
-    <h1>O que é HTML?</h1>
-    <p  id ="paragrafo">O HTML (HyperText Markup Language) é a linguagem fundamental para a criação de páginas web, fornecendo a estrutura necessária para exibir conteúdo na internet. Desenvolvido por Tim Berners-Lee em 1991, o HTML evoluiu ao longo dos anos, com a versão mais recente sendo o HTML5, que introduziu recursos avançados para suportar multimídia, gráficos vetoriais e APIs para geolocalização, entre outros.
-    <h3> Estrutura Básica de um Documento HTML</h3>
-    <p  id ="paragrafo">Um documento HTML é composto por elementos que definem a organização e a apresentação do conteúdo. Esses elementos são representados por tags, que indicam o início e o fim de cada componente. A estrutura básica inclui:
-    <br>
-    <br>
-    <img src="imagens/exemplo.html.png" >
-    <br>
-    <p> Outro detalhe importante é que sempre ao abrir uma tag ela deverá ser fechada , por exemplo:
-        <h4> &lt;p&gt; exemplo &lt;/p&gt;</h4>
-    As tags mais comumente usadas :</p>
-    <br>
+    <h1>O que é CSS?</h1>
+    <p  id ="paragrafo">
+        CSS, ou Folhas de Estilo em Cascata, é uma linguagem fundamental no desenvolvimento web, responsável por definir a aparência e o layout de páginas HTML. Enquanto o HTML estrutura o conteúdo da página, o CSS determina como esse conteúdo será apresentado ao usuário, incluindo aspectos como cores, fontes, espaçamento e posicionamento dos elementos.
+    
+        <h2>Estrutura Básica do CSS</h2>
+        <p id ="paragrafo">O CSS é composto por regras que consistem em seletores e declarações. Um seletor identifica o(s) elemento(s) HTML a serem estilizados, e a declaração especifica o estilo a ser aplicado. Uma declaração é composta por uma propriedade e um valor.</p>
+        <pre>
+            <code>
+    seletor {
+      propriedade: valor;
+    }
+            </code>
+        </pre>
+    
+        <p id ="paragrafo">Por exemplo, para alterar a cor do texto de todos os parágrafos para azul, utilizamos:</p>
+        <pre>
+            <code>
+    p {
+      color: blue;
+    }
+            </code>
+        </pre>
+    
+        <h2>Formas de Aplicar CSS</h2>
+        <p id ="paragrafo">Existem três maneiras principais de aplicar CSS a um documento HTML:</p>
+        <ol>
+            <li><strong>CSS Externo</strong>: Consiste em criar um arquivo separado com extensão .css e vinculá-lo ao documento HTML. Essa abordagem permite a reutilização de estilos em várias páginas e facilita a manutenção do código. Para vincular o CSS externo, adiciona-se a seguinte linha dentro da tag &lt;head&gt; do HTML:
+                <pre>
+                    <code>
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+                    </code>
+                </pre>
+            </li>
+            <li><strong>CSS Interno</strong>: Os estilos são definidos dentro da própria página HTML, utilizando a tag &lt;style&gt; dentro da tag &lt;head&gt;. Essa abordagem é útil para páginas únicas ou quando se deseja aplicar estilos específicos a um único documento.
+                <pre>
+                    <code>
+    &lt;style&gt;
+      p {
+        color: blue;
+      }
+    &lt;/style&gt;
+                    </code>
+                </pre>
+            </li>
+            <li><strong>CSS Inline</strong>: Os estilos são aplicados diretamente aos elementos HTML através do atributo style. Essa abordagem é menos recomendada, pois pode tornar o código mais difícil de manter, especialmente em projetos maiores.
+                <pre>
+                    <code>
+    &lt;p style="color: blue;"&gt;Texto em azul&lt;/p&gt;
+                    </code>
+                </pre>
+            </li>
+        </ol>
+    <img src="imagens/cssi.png">
 
-    <img src="imagens/htmltags.png">
-    <br>
-    <p id ="paragrafo">Para aprofundar-se no estudo do HTML, o <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a> oferece tutoriais abrangentes e exemplos práticos que cobrem desde os conceitos básicos até técnicas avançadas.</p>
-    <br>
-    <br>
-
-    <h2><strong>Referências</strong></h2>
-    <ul>
-        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
-        <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">W3Schools - HTML Basic Examples</a></li>
-        <li><a href="https://www.w3schools.com/html/html_links.asp" target="_blank">W3Schools - HTML Links</a></li>
-        <li><a href="https://www.w3schools.com/html/html_editor.asp" target="_blank">W3Schools - HTML Editor</a></li>
-        <li><a href="https://www.w3schools.com/TAGs/" target="_blank">W3Schools - HTML Element Reference</a></li>
-    </ul>
+        <h2>Propriedades Comuns no CSS</h2>
+        <p id ="paragrafo">Além disso, o CSS oferece uma ampla gama de propriedades para estilizar elementos, como:</p>
+        <ul id="paragrafo">
+            <li><strong>Cor de fundo</strong>: background-color</li>
+            <li><strong>Fonte</strong>: font-family, font-size, font-weight</li>
+            <li><strong>Espaçamento</strong>: margin, padding</li>
+            <li><strong>Bordas</strong>: border</li>
+            <li><strong>Alinhamento</strong>: text-align, vertical-align</li>
+        </ul>
+    
+        
+        <h2><strong>Referências</strong></h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Styling_basics/Getting_started?utm_source=chatgpt.com">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/Css/?utm_source=chatgpt.com">W3Schools</a></li>
+            <li><a href="https://web.dev/learn/css/welcome?hl=pt-br&utm_source=chatgpt.com">Web.dev</a></li>
+        </ul>
     </p>
 </section>
 
@@ -89,29 +133,24 @@
     <h2>Mini Simulado de HTML</h2>
     <form id="quizForm">
         <div class="question">
-            <p p id ="paragrafo">1.</p>
-            <label><input type="radio" name="q1" value="a"> alternativa 1 </label>
-            <label><input type="radio" name="q1" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q1" value="c"> alternativa 3 </label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">2. </p>
-            <label><input type="radio" name="q2" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q2" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q2" value="c"> alternativa 3 </label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
-        </div>
+            <p><strong> O que é o CSS?</strong></p>
+            <div><label><input type="radio" name="q1" value="a"> Uma linguagem de programação </label></div>
+            <div><label><input type="radio" name="q1" value="b"> uma linguagem de estilo para páginas web</label></div>
+            <div><label><input type="radio" name="q1" value="c"> Uma linguagem de marcação </label></div>
+          </div>
+          <div class="question">
+            <p><strong>. Qual propriedade CSS é usada para alterar a cor de fundo de um elemento?</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> color</label></div>
+            <div><label><input type="radio" name="q2" value="b"> background-color</label></div>
+            <div><label><input type="radio" name="q2" value="c"> border-color</label></div>
+          </div>
+          <div class="question">
+            <p><strong> Como você seleciona todos os parágrafos (&gt;p&lt;) de uma página para alterar a cor do texto para vermelho??</strong></p>
+            <div><label><input type="radio" name="q3" value="a">  p { color: red; }</label></div>
+            <div><label><input type="radio" name="q3" value="b"> p { background-color: red; }</label></div>
+            <div><label><input type="radio" name="q3" value="c"> p { text-color: red; }</label></div>
+          </div>
+
         <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
     </form>
     <p id="resultado"></p>
@@ -119,7 +158,7 @@
 
 <!-- resposta página HTML  -->
 <script>
-    const respostasCorretas = { q1: "a", q2: "b", q3: "c",q4: "a" };
+    const respostasCorretas = { q1: "b", q2: "b", q3: "a" };
 
     function verificarRespostas() {
       let acertos = 0;

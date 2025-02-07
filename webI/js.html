@@ -55,63 +55,69 @@
 </header>
 <section class="content">
     <br>
-    <h1>O que é HTML?</h1>
-    <p  id ="paragrafo">O HTML (HyperText Markup Language) é a linguagem fundamental para a criação de páginas web, fornecendo a estrutura necessária para exibir conteúdo na internet. Desenvolvido por Tim Berners-Lee em 1991, o HTML evoluiu ao longo dos anos, com a versão mais recente sendo o HTML5, que introduziu recursos avançados para suportar multimídia, gráficos vetoriais e APIs para geolocalização, entre outros.
-    <h3> Estrutura Básica de um Documento HTML</h3>
-    <p  id ="paragrafo">Um documento HTML é composto por elementos que definem a organização e a apresentação do conteúdo. Esses elementos são representados por tags, que indicam o início e o fim de cada componente. A estrutura básica inclui:
+    <h1>JavaScript</h1>
+    <p id="paragrafo">JavaScript é uma linguagem de programação orientada a objetos e plataforma cruzada, amplamente utilizada para tornar páginas web interativas. :contentReference[oaicite:0]{index=0}</p>
+
+    <h2>O que é JavaScript?</h2>
+    <p id="paragrafo">JavaScript é uma linguagem de script que permite implementar itens complexos em páginas web, como conteúdo que se atualiza em intervalos de tempo, mapas interativos ou gráficos 2D/3D animados. :contentReference[oaicite:1]{index=1}</p>
+
+    <h2>Características Principais</h2>
+    <ul id="paragrafo">
+        <li><strong>Interatividade:</strong> Permite a criação de páginas web dinâmicas e interativas.</li>
+        <li><strong>Compatibilidade:</strong> Funciona em todos os navegadores modernos sem a necessidade de plugins adicionais.</li>
+        <li><strong>Versatilidade:</strong> Pode ser utilizado tanto no lado do cliente (navegador) quanto no lado do servidor (com Node.js).</li>
+    </ul>
+<img src="imagens/javascriptImg.jpg">
+<br>
+    <h2>Como Iniciar com JavaScript</h2>
+    <p id="paragrafo">Para começar a programar em JavaScript, você pode incluir o código diretamente em um arquivo HTML utilizando a tag <code>&lt;script&gt;. Por exemplo:</p>
     <br>
+&lt;script&gt;
+  // Seu código JavaScript aqui
+  console.log('Olá, mundo!');
+&lt;/script&gt;
+        
+ <br>
+    <p id="paragrafo">Alternativamente, é possível criar um arquivo externo com a extensão <code>.js</code> e vinculá-lo ao seu HTML:</p>
+    
+&lt;script src="caminho/para/seu/arquivo.js"&gt;&lt;/script&gt;
+        
     <br>
-    <img src="imagens/exemplo.html.png" >
-    <br>
-    <p> Outro detalhe importante é que sempre ao abrir uma tag ela deverá ser fechada , por exemplo:
-        <h4> &lt;p&gt; exemplo &lt;/p&gt;</h4>
-    As tags mais comumente usadas :</p>
     <br>
 
-    <img src="imagens/htmltags.png">
-    <br>
-    <p id ="paragrafo">Para aprofundar-se no estudo do HTML, o <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a> oferece tutoriais abrangentes e exemplos práticos que cobrem desde os conceitos básicos até técnicas avançadas.</p>
-    <br>
-    <br>
 
     <h2><strong>Referências</strong></h2>
-    <ul>
-        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools - HTML Tutorial</a></li>
-        <li><a href="https://www.w3schools.com/html/html_basic.asp" target="_blank">W3Schools - HTML Basic Examples</a></li>
-        <li><a href="https://www.w3schools.com/html/html_links.asp" target="_blank">W3Schools - HTML Links</a></li>
-        <li><a href="https://www.w3schools.com/html/html_editor.asp" target="_blank">W3Schools - HTML Editor</a></li>
-        <li><a href="https://www.w3schools.com/TAGs/" target="_blank">W3Schools - HTML Element Reference</a></li>
-    </ul>
-    </p>
-</section>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction">MDN Web Docs</a></li>
+            <li><a href="https://www.freecodecamp.org/portuguese/news/o-manual-de-javascript-para-iniciantes/">freeCodeCamp</a></li>
+            <li><a href="https://www.devmedia.com.br/introducao-ao-javascript/25548">DevMedia</a></li>
+        </ul>
+<br>
+<br>
+
 
 <section class="quiz">
     <h2>Mini Simulado de HTML</h2>
     <form id="quizForm">
         <div class="question">
-            <p p id ="paragrafo">1.</p>
-            <label><input type="radio" name="q1" value="a"> alternativa 1 </label>
-            <label><input type="radio" name="q1" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q1" value="c"> alternativa 3 </label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">2. </p>
-            <label><input type="radio" name="q2" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q2" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q2" value="c"> alternativa 3 </label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
-        </div>
-        <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
-        </div>
+            <p ><strong>Como declarar uma variável em JavaScript e atribuir um valor a ela? Escreva um exemplo.</strong></p>
+            <div><label><input type="radio" name="q1" value="a">var = 5; </label></div>
+            <div><label><input type="radio" name="q1" value="b"> let 5 = var;</label></div>
+            <div><label><input type="radio" name="q1" value="c">  let var = 5; </label></div>
+          </div>
+          <div class="question">
+            <p ><strong> O que é um array em JavaScript? Crie um exemplo de array com três elementos.</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> Um tipo de variável que armazena um único valor.</label></div>
+            <div><label><input type="radio" name="q2" value="b"> Um tipo de objeto que pode armazenar múltiplos valores em uma única variável.</label></div>
+            <div><label><input type="radio" name="q2" value="c"> Um tipo de função que manipula números.</label></div>
+          </div>
+          <div class="question">
+            <p><strong> O que significa "null" em JavaScript? Qual a diferença entre "null" e "undefined"?</strong></p>
+            <div><label><input type="radio" name="q3" value="a">  "null" significa que uma variável não existe, e "undefined" é quando a variável não foi definida.</label></div>
+            <div><label><input type="radio" name="q3" value="b">"null" é um valor nulo e "undefined" significa que a variável foi declarada, mas não inicializada. </label></div>
+            <div><label><input type="radio" name="q3" value="c"> Ambos significam que a variável não existe.</label></div>
+          </div>
+
         <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
     </form>
     <p id="resultado"></p>
@@ -119,7 +125,7 @@
 
 <!-- resposta página HTML  -->
 <script>
-    const respostasCorretas = { q1: "a", q2: "b", q3: "c",q4: "a" };
+    const respostasCorretas = { q1: "c", q2: "b", q3: "b" };
 
     function verificarRespostas() {
       let acertos = 0;
