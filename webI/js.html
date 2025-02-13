@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aprendendo com a gente WEB! </title>
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS e box icon -->
+    <style>
+        h1{
+            font-size: 45px;
+            color: #333;
+        }
+        #paragrafo {
+            font-family: Arial, sans-serif; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            text-align: justify; 
+            color: #333; 
+            margin: 20px 0;
+            text-indent: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        a:hover {
+            color: #45a049; 
+        }
+    </style>
+</head>
+
+<body>
+<!--navbar-->
+<header>
+    <a href="index.html" class="logo">
+        <img src="imagens/logo.png" alt="Logo do site">
+    </a>
+    <!--navlist-->
+    <ul class="navbar">
+        
+        <li><a href="index.html" class="home">Home</a></li>
+        <li><a href="explorar.html" >Explorar</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="simulados.html">Simulados </a></li>  
+        <li><a href="sobre.html">Sobre </a></li> 
+       
+ 
+    </ul>
+</header>
+<section class="content">
+    <br>
+    <h1>JavaScript</h1>
+    <p id="paragrafo">JavaScript é uma linguagem de programação orientada a objetos e plataforma cruzada, amplamente utilizada para tornar páginas web interativas. :contentReference[oaicite:0]{index=0}</p>
+
+    <h2>O que é JavaScript?</h2>
+    <p id="paragrafo">JavaScript é uma linguagem de script que permite implementar itens complexos em páginas web, como conteúdo que se atualiza em intervalos de tempo, mapas interativos ou gráficos 2D/3D animados. :contentReference[oaicite:1]{index=1}</p>
+
+    <h2>Características Principais</h2>
+    <ul id="paragrafo">
+        <li><strong>Interatividade:</strong> Permite a criação de páginas web dinâmicas e interativas.</li>
+        <li><strong>Compatibilidade:</strong> Funciona em todos os navegadores modernos sem a necessidade de plugins adicionais.</li>
+        <li><strong>Versatilidade:</strong> Pode ser utilizado tanto no lado do cliente (navegador) quanto no lado do servidor (com Node.js).</li>
+    </ul>
+<img src="imagens/javascriptImg.jpg">
+<br>
+    <h2>Como Iniciar com JavaScript</h2>
+    <p id="paragrafo">Para começar a programar em JavaScript, você pode incluir o código diretamente em um arquivo HTML utilizando a tag <code>&lt;script&gt;. Por exemplo:</p>
+    <br>
+&lt;script&gt;
+  // Seu código JavaScript aqui
+  console.log('Olá, mundo!');
+&lt;/script&gt;
+        
+ <br>
+    <p id="paragrafo">Alternativamente, é possível criar um arquivo externo com a extensão <code>.js</code> e vinculá-lo ao seu HTML:</p>
+    
+&lt;script src="caminho/para/seu/arquivo.js"&gt;&lt;/script&gt;
+        
+    <br>
+    <br>
+
+
+    <h2><strong>Referências</strong></h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Introduction">MDN Web Docs</a></li>
+            <li><a href="https://www.freecodecamp.org/portuguese/news/o-manual-de-javascript-para-iniciantes/">freeCodeCamp</a></li>
+            <li><a href="https://www.devmedia.com.br/introducao-ao-javascript/25548">DevMedia</a></li>
+        </ul>
+<br>
+<br>
+
+
+<section class="quiz">
+    <h2>Mini Simulado de HTML</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p ><strong>Como declarar uma variável em JavaScript e atribuir um valor a ela? Escreva um exemplo.</strong></p>
+            <div><label><input type="radio" name="q1" value="a">var = 5; </label></div>
+            <div><label><input type="radio" name="q1" value="b"> let 5 = var;</label></div>
+            <div><label><input type="radio" name="q1" value="c">  let var = 5; </label></div>
+          </div>
+          <div class="question">
+            <p ><strong> O que é um array em JavaScript? Crie um exemplo de array com três elementos.</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> Um tipo de variável que armazena um único valor.</label></div>
+            <div><label><input type="radio" name="q2" value="b"> Um tipo de objeto que pode armazenar múltiplos valores em uma única variável.</label></div>
+            <div><label><input type="radio" name="q2" value="c"> Um tipo de função que manipula números.</label></div>
+          </div>
+          <div class="question">
+            <p><strong> O que significa "null" em JavaScript? Qual a diferença entre "null" e "undefined"?</strong></p>
+            <div><label><input type="radio" name="q3" value="a">  "null" significa que uma variável não existe, e "undefined" é quando a variável não foi definida.</label></div>
+            <div><label><input type="radio" name="q3" value="b">"null" é um valor nulo e "undefined" significa que a variável foi declarada, mas não inicializada. </label></div>
+            <div><label><input type="radio" name="q3" value="c"> Ambos significam que a variável não existe.</label></div>
+          </div>
+
+        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+    <p id="resultado"></p>
+</section>
+
+<!-- resposta página HTML  -->
+<script>
+    const respostasCorretas = { q1: "c", q2: "b", q3: "b" };
+
+    function verificarRespostas() {
+      let acertos = 0;
+
+      for (let q in respostasCorretas) {
+          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+          if (selecionado && selecionado.value === respostasCorretas[q]) {
+              acertos++;
+          }
+      }
+
+      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+    }
+  </script>
+    
+ </section>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Sobre Nós</h3>
+            <p>Nosso site educacional é dedicado a ajudar você a aprender e explorar novos conhecimentos com facilidade e eficiência.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Links Úteis</h3>
+            <ul class="navbar">
+                <li><a href="index.html" class="home">Home</a></li>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <p>Email: contato@educacional.com</p>
+            <p>Telefone: (00) 1234-5678</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/home"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Site Educacional. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</section>
+  
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="jspages/script.js"></script>
+
+</body>
+</html>

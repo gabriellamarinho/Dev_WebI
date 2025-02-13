@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aprendendo com a gente WEB! </title>
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS e box icon -->
+</head>
+
+<body>
+<!--navbar-->
+<header>
+    <a href="index.html" class="logo">
+        <img src="imagens/logo.png" alt="Logo do site">
+    </a>
+    <!--navlist-->
+    <ul class="navbar">
+        <li><a href="index.html" class="home">Home</a></li>
+        <li><a href="explorar.html" >Explorar</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="simulados.html">Simulados </a></li>  
+        <li><a href="sobre.html">Sobre </a></li>  
+ 
+    </ul>
+</header>
+<body>
+  <h1>Simulado Geral</h1>
+  
+  <section class="quiz">
+      <h2>Mini Simulado de JavaScript</h2>
+      <form id="quizForm">
+        <div class="question">
+          <p><strong>Qual comando exibe uma mensagem no console do navegador?</strong></p>
+          <div><label><input type="radio" name="q1" value="a"> alert()</label></div>
+          <div><label><input type="radio" name="q1" value="b"> console.log()</label></div>
+          <div><label><input type="radio" name="q1" value="c"> document.write()</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Qual palavra-chave é usada para declarar uma variável em JavaScript?</strong></p>
+          <div><label><input type="radio" name="q2" value="a"> var</label></div>
+          <div><label><input type="radio" name="q2" value="b"> let</label></div>
+          <div><label><input type="radio" name="q2" value="c"> Ambas</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Como se escreve um comentário de linha única em JavaScript?</strong></p>
+          <div><label><input type="radio" name="q3" value="a"> /* Comentário */</label></div>
+          <div><label><input type="radio" name="q3" value="b"> // Comentário</label></div>
+          <div><label><input type="radio" name="q3" value="c"> &lt;!-- Comentário --&gt;</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Qual é o atributo usado no HTML para fazer referência a uma URL externa?</strong></p>
+          <div><label><input type="radio" name="q4" value="a"> object</label></div>
+          <div><label><input type="radio" name="q4" value="b"> href</label></div>
+          <div><label><input type="radio" name="q4" value="c"> Strong</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>Para que um usuário do HTML5 consiga definir um conjunto de campos, qual tag deve ser utilizada?</strong></p>
+          <div><label><input type="radio" name="q5" value="a"> &lt;li&gt;</label></div>
+          <div><label><input type="radio" name="q5" value="b"> &lt;fieldset&gt;</label></div>
+          <div><label><input type="radio" name="q5" value="c"> &lt;a&gt;</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>O que o seguinte comando HTML faz?</strong></p>
+          <p>&lt;a href="https://example.com" target="_blank"&gt;Link&lt;/a&gt;</p>
+          <div><label><input type="radio" name="q6" value="a"> O documento abre no corpo inteiro da janela.</label></div>
+          <div><label><input type="radio" name="q6" value="b"> O link abre na própria página.</label></div>
+          <div><label><input type="radio" name="q6" value="c"> O documento abre em uma nova janela ou aba.</label></div>
+        </div>
+        
+        <div class="question">
+          <p><strong>A tag &lt;option&gt;, quando utilizada em HTML5, é responsável por:</strong></p>
+          <div><label><input type="radio" name="q7" value="a"> Definir uma imagem.</label></div>
+          <div><label><input type="radio" name="q7" value="b"> Definir uma área ou seção.</label></div>
+          <div><label><input type="radio" name="q7" value="c"> Definir uma opção em uma lista suspensa.</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong> Qual a função principal do CSS em uma página web?</strong></p>
+          <div><label><input type="radio" name="q8" value="a"> Definir a estrutura semântica do conteúdo</label></div>
+          <div><label><input type="radio" name="q8" value="b"> Controlar a aparência visual dos elementos HTML</label></div>
+          <div><label><input type="radio" name="q8" value="c"> Definir as interações dinâmicas com o usuário Definir uma imagem.</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong>. Qual seletor CSS é utilizado para aplicar estilos a todos os elementos de uma determinada classe?</strong></p>
+          <div><label><input type="radio" name="q9" value="a"> #nomeClasse</label></div>
+          <div><label><input type="radio" name="q9" value="b"> .nomeClasse</label></div>
+          <div><label><input type="radio" name="q9" value="c"> *nomeClasse</label></div>
+        </div>
+        <div class="question">
+          <p id="paragrafo"><strong> Qual propriedade CSS é utilizada para definir a distância entre as bordas de um elemento e o conteúdo dentro dele?</strong></p>
+          <div><label><input type="radio" name="q10" value="a"> padding</label></div>
+          <div><label><input type="radio" name="q10" value="b"> margin</label></div>
+          <div><label><input type="radio" name="q10" value="c"> border</label></div>
+        </div>
+          <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+      </form>
+      <p id="resultado"></p>
+  </section>
+
+  <button id="refazer" onclick="refazerSimulado()" style="display:none,;">Refazer</button>
+  <div id="resultado"></div>
+
+</section>
+
+<style>
+  .correto { color: green; font-weight: bold; }
+  .errado { color: red; font-weight: bold; }
+</style>
+
+<!-- respostas página js -->
+<script>
+const respostasCorretas = {
+q1: "b",
+q2: "c",
+q3: "b",
+q4:"b",
+q5:"b",
+q6:"c",
+q7:"c",
+q8:"b",
+q9:"b",
+q10:"c",
+
+
+};
+
+// Verificar respostas
+function verificarRespostas() {
+let acertos = 0;
+
+for (let q in respostasCorretas) {
+  const selecionado = document.querySelector(`input[name="${q}"]:checked`);
+  const labels = document.querySelectorAll(`input[name="${q}"]`);
+  
+  labels.forEach(label => {
+    label.parentElement.classList.remove("correto", "errado");
+  });
+  
+  if (selecionado) {
+    if (selecionado.value === respostasCorretas[q]) {
+      acertos++;
+      selecionado.parentElement.classList.add("correto");
+    } else {
+      selecionado.parentElement.classList.add("errado");
+    }
+  }
+}
+
+const totalQuestoes = Object.keys(respostasCorretas).length;
+document.getElementById("resultado").innerHTML = `
+  Você acertou ${acertos} de ${totalQuestoes} questões.<br>
+`;
+
+// Desativar os inputs após a resposta
+document.querySelectorAll('input[type="radio"]').forEach(input => {
+  input.disabled = true;
+});
+
+// Exibir botão de refazer
+document.getElementById("refazer").style.display = "block";
+}
+
+// Função para refazer o simulado
+function refazerSimulado() {
+document.getElementById("quizForm").reset();
+document.getElementById("resultado").innerHTML = "";
+
+// Reativar os inputs
+document.querySelectorAll('input[type="radio"]').forEach(input => {
+  input.disabled = false;
+  input.parentElement.classList.remove("correto", "errado");
+});
+
+// Esconder botão de refazer
+document.getElementById("refazer").style.display = "none";
+}
+</script>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Sobre Nós</h3>
+            <p>Nosso site educacional é dedicado a ajudar você a aprender e explorar novos conhecimentos com facilidade e eficiência.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explorar.html">Explorar</a></li>
+                <li><a href="formulario.html">Formulario</a></li>                
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <p>Email: contato@educacional.com</p>
+            <p>Telefone: (00) 1234-5678</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/home"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Site Educacional. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</section>
+  
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="jspages/script.js"></script>
+
+</body>
+</html>
+
+

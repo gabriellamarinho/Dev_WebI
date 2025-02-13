@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aprendendo com a gente WEB! </title>
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS e box icon -->
+    <style>
+        h1{
+            font-size: 45px;
+            color: #333;
+        }
+        #paragrafo {
+            font-family: Arial, sans-serif; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            text-align: justify; 
+            color: #333; 
+            margin: 20px 0;
+            text-indent: 50px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        a:hover {
+            color: #45a049; 
+        }
+    </style>
+</head>
+
+<body>
+<!--navbar-->
+<header>
+    <a href="index.html" class="logo">
+        <img src="imagens/logo.png" alt="Logo do site">
+    </a>
+    <!--navlist-->
+    <ul class="navbar">
+        
+        <li><a href="index.html" class="home">Home</a></li>
+        <li><a href="explorar.html" >Explorar</a></li>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="simulados.html">Simulados </a></li>  
+        <li><a href="sobre.html">Sobre </a></li> 
+       
+ 
+    </ul>
+</header>
+<section class="content">
+    <br>
+    <h1>O que é CSS?</h1>
+    <p  id ="paragrafo">
+        CSS, ou Folhas de Estilo em Cascata, é uma linguagem fundamental no desenvolvimento web, responsável por definir a aparência e o layout de páginas HTML. Enquanto o HTML estrutura o conteúdo da página, o CSS determina como esse conteúdo será apresentado ao usuário, incluindo aspectos como cores, fontes, espaçamento e posicionamento dos elementos.
+    
+        <h2>Estrutura Básica do CSS</h2>
+        <p id ="paragrafo">O CSS é composto por regras que consistem em seletores e declarações. Um seletor identifica o(s) elemento(s) HTML a serem estilizados, e a declaração especifica o estilo a ser aplicado. Uma declaração é composta por uma propriedade e um valor.</p>
+        <pre>
+            <code>
+    seletor {
+      propriedade: valor;
+    }
+            </code>
+        </pre>
+    
+        <p id ="paragrafo">Por exemplo, para alterar a cor do texto de todos os parágrafos para azul, utilizamos:</p>
+        <pre>
+            <code>
+    p {
+      color: blue;
+    }
+            </code>
+        </pre>
+    
+        <h2>Formas de Aplicar CSS</h2>
+        <p id ="paragrafo">Existem três maneiras principais de aplicar CSS a um documento HTML:</p>
+        <ol>
+            <li><strong>CSS Externo</strong>: Consiste em criar um arquivo separado com extensão .css e vinculá-lo ao documento HTML. Essa abordagem permite a reutilização de estilos em várias páginas e facilita a manutenção do código. Para vincular o CSS externo, adiciona-se a seguinte linha dentro da tag &lt;head&gt; do HTML:
+                <pre>
+                    <code>
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+                    </code>
+                </pre>
+            </li>
+            <li><strong>CSS Interno</strong>: Os estilos são definidos dentro da própria página HTML, utilizando a tag &lt;style&gt; dentro da tag &lt;head&gt;. Essa abordagem é útil para páginas únicas ou quando se deseja aplicar estilos específicos a um único documento.
+                <pre>
+                    <code>
+    &lt;style&gt;
+      p {
+        color: blue;
+      }
+    &lt;/style&gt;
+                    </code>
+                </pre>
+            </li>
+            <li><strong>CSS Inline</strong>: Os estilos são aplicados diretamente aos elementos HTML através do atributo style. Essa abordagem é menos recomendada, pois pode tornar o código mais difícil de manter, especialmente em projetos maiores.
+                <pre>
+                    <code>
+    &lt;p style="color: blue;"&gt;Texto em azul&lt;/p&gt;
+                    </code>
+                </pre>
+            </li>
+        </ol>
+    <img src="imagens/cssi.png">
+
+        <h2>Propriedades Comuns no CSS</h2>
+        <p id ="paragrafo">Além disso, o CSS oferece uma ampla gama de propriedades para estilizar elementos, como:</p>
+        <ul id="paragrafo">
+            <li><strong>Cor de fundo</strong>: background-color</li>
+            <li><strong>Fonte</strong>: font-family, font-size, font-weight</li>
+            <li><strong>Espaçamento</strong>: margin, padding</li>
+            <li><strong>Bordas</strong>: border</li>
+            <li><strong>Alinhamento</strong>: text-align, vertical-align</li>
+        </ul>
+    
+        
+        <h2><strong>Referências</strong></h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Styling_basics/Getting_started?utm_source=chatgpt.com">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/Css/?utm_source=chatgpt.com">W3Schools</a></li>
+            <li><a href="https://web.dev/learn/css/welcome?hl=pt-br&utm_source=chatgpt.com">Web.dev</a></li>
+        </ul>
+    </p>
+</section>
+
+<section class="quiz">
+    <h2>Mini Simulado de HTML</h2>
+    <form id="quizForm">
+        <div class="question">
+            <p><strong> O que é o CSS?</strong></p>
+            <div><label><input type="radio" name="q1" value="a"> Uma linguagem de programação </label></div>
+            <div><label><input type="radio" name="q1" value="b"> uma linguagem de estilo para páginas web</label></div>
+            <div><label><input type="radio" name="q1" value="c"> Uma linguagem de marcação </label></div>
+          </div>
+          <div class="question">
+            <p><strong>. Qual propriedade CSS é usada para alterar a cor de fundo de um elemento?</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> color</label></div>
+            <div><label><input type="radio" name="q2" value="b"> background-color</label></div>
+            <div><label><input type="radio" name="q2" value="c"> border-color</label></div>
+          </div>
+          <div class="question">
+            <p><strong> Como você seleciona todos os parágrafos (&gt;p&lt;) de uma página para alterar a cor do texto para vermelho??</strong></p>
+            <div><label><input type="radio" name="q3" value="a">  p { color: red; }</label></div>
+            <div><label><input type="radio" name="q3" value="b"> p { background-color: red; }</label></div>
+            <div><label><input type="radio" name="q3" value="c"> p { text-color: red; }</label></div>
+          </div>
+
+        <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
+    </form>
+    <p id="resultado"></p>
+</section>
+
+<!-- resposta página HTML  -->
+<script>
+    const respostasCorretas = { q1: "b", q2: "b", q3: "a" };
+
+    function verificarRespostas() {
+      let acertos = 0;
+
+      for (let q in respostasCorretas) {
+          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+          if (selecionado && selecionado.value === respostasCorretas[q]) {
+              acertos++;
+          }
+      }
+
+      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+    }
+  </script>
+    
+ </section>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Sobre Nós</h3>
+            <p>Nosso site educacional é dedicado a ajudar você a aprender e explorar novos conhecimentos com facilidade e eficiência.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Links Úteis</h3>
+            <ul class="navbar">
+                <li><a href="index.html" class="home">Home</a></li>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <p>Email: contato@educacional.com</p>
+            <p>Telefone: (00) 1234-5678</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/home"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 Site Educacional. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</section>
+  
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="jspages/script.js"></script>
+
+</body>
+</html>
