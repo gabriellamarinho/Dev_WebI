@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aprendendo com a gente WEB! </title>
-    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
@@ -130,49 +130,51 @@
 </section>
 
 <section class="quiz">
-    <h2>Mini Simulado de HTML</h2>
+    <h2>Mini Simulado de CSS</h2>
     <form id="quizForm">
         <div class="question">
-            <p><strong> O que é o CSS?</strong></p>
-            <div><label><input type="radio" name="q1" value="a"> Uma linguagem de programação </label></div>
-            <div><label><input type="radio" name="q1" value="b"> uma linguagem de estilo para páginas web</label></div>
-            <div><label><input type="radio" name="q1" value="c"> Uma linguagem de marcação </label></div>
-          </div>
-          <div class="question">
-            <p><strong>. Qual propriedade CSS é usada para alterar a cor de fundo de um elemento?</strong></p>
-            <div><label><input type="radio" name="q2" value="a"> color</label></div>
-            <div><label><input type="radio" name="q2" value="b"> background-color</label></div>
-            <div><label><input type="radio" name="q2" value="c"> border-color</label></div>
-          </div>
-          <div class="question">
-            <p><strong> Como você seleciona todos os parágrafos (&gt;p&lt;) de uma página para alterar a cor do texto para vermelho??</strong></p>
-            <div><label><input type="radio" name="q3" value="a">  p { color: red; }</label></div>
-            <div><label><input type="radio" name="q3" value="b"> p { background-color: red; }</label></div>
-            <div><label><input type="radio" name="q3" value="c"> p { text-color: red; }</label></div>
-          </div>
+            <p><strong>O que significa CSS?</strong></p>
+            <div><label><input type="radio" name="q1" value="a"> Computer Style Sheets</label></div>
+            <div><label><input type="radio" name="q1" value="b"> Cascading Style Sheets</label></div>
+            <div><label><input type="radio" name="q1" value="c"> Creative Styling System</label></div>
+        </div>
+
+        <div class="question">
+            <p><strong>Qual propriedade do CSS é usada para alterar a cor do texto?</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> font-color</label></div>
+            <div><label><input type="radio" name="q2" value="b"> text-style</label></div>
+            <div><label><input type="radio" name="q2" value="c"> color</label></div>
+        </div>
+
+        <div class="question">
+            <p><strong>Como fazer um texto ficar em negrito usando CSS?</strong></p>
+            <div><label><input type="radio" name="q3" value="a"> font-weight: bold;</label></div>
+            <div><label><input type="radio" name="q3" value="b"> text-style: bold;</label></div>
+            <div><label><input type="radio" name="q3" value="c"> bold: true;</label></div>
+        </div>
 
         <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
     </form>
     <p id="resultado"></p>
 </section>
 
-<!-- resposta página HTML  -->
+<!-- Script para verificar as respostas -->
 <script>
-    const respostasCorretas = { q1: "b", q2: "b", q3: "a" };
+    const respostasCorretas = { q1: "b", q2: "c", q3: "a" };
 
     function verificarRespostas() {
-      let acertos = 0;
+        let acertos = 0;
 
-      for (let q in respostasCorretas) {
-          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
-          if (selecionado && selecionado.value === respostasCorretas[q]) {
-              acertos++;
-          }
-      }
+        for (let q in respostasCorretas) {
+            let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+            if (selecionado && selecionado.value === respostasCorretas[q]) {
+                acertos++;
+            }
+        }
 
-      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+        document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
     }
-  </script>
+</script>
     
  </section>
 <footer class="site-footer">
