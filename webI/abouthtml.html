@@ -89,52 +89,49 @@
     <h2>Mini Simulado de HTML</h2>
     <form id="quizForm">
         <div class="question">
-            <p p id ="paragrafo">1.</p>
-            <label><input type="radio" name="q1" value="a"> alternativa 1 </label>
-            <label><input type="radio" name="q1" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q1" value="c"> alternativa 3 </label>
+            <p><strong>O que significa HTML?</strong></p>
+            <div><label><input type="radio" name="q1" value="a"> Hyper Transfer Markup Language</label></div>
+            <div><label><input type="radio" name="q1" value="b"> Hyper Text Markup Language</label></div>
+            <div><label><input type="radio" name="q1" value="c"> High Tech Modern Language</label></div>
         </div>
+
         <div class="question">
-            <p id ="paragrafo">2. </p>
-            <label><input type="radio" name="q2" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q2" value="b"> alternativa 2</label>
-            <label><input type="radio" name="q2" value="c"> alternativa 3 </label>
+            <p><strong>Qual tag HTML é usada para criar um link?</strong></p>
+            <div><label><input type="radio" name="q2" value="a"> &lt;link&gt;</label></div>
+            <div><label><input type="radio" name="q2" value="b"> &lt;a&gt;</label></div>
+            <div><label><input type="radio" name="q2" value="c"> &lt;href&gt;</label></div>
         </div>
+
         <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
+            <p><strong>Qual destas tags é usada para definir um parágrafo em HTML?</strong></p>
+            <div><label><input type="radio" name="q3" value="a"> &lt;div&gt;</label></div>
+            <div><label><input type="radio" name="q3" value="b"> &lt;p&gt;</label></div>
+            <div><label><input type="radio" name="q3" value="c"> &lt;span&gt;</label></div>
         </div>
-        <div class="question">
-            <p id ="paragrafo">3.</p>
-            <label><input type="radio" name="q3" value="a"> alternativa1 </label>
-            <label><input type="radio" name="q3" value="b"> alternativa 2 </label>
-            <label><input type="radio" name="q3" value="c">alternativa 3</label>
-        </div>
+
         <button type="button" onclick="verificarRespostas()">Verificar Respostas</button>
     </form>
     <p id="resultado"></p>
 </section>
 
-<!-- resposta página HTML  -->
+<!-- Script para verificar as respostas -->
 <script>
-    const respostasCorretas = { q1: "a", q2: "b", q3: "c",q4: "a" };
+    const respostasCorretas = { q1: "b", q2: "b", q3: "b" };
 
     function verificarRespostas() {
-      let acertos = 0;
+        let acertos = 0;
 
-      for (let q in respostasCorretas) {
-          let selecionado = document.querySelector(`input[name="${q}"]:checked`);
-          if (selecionado && selecionado.value === respostasCorretas[q]) {
-              acertos++;
-          }
-      }
+        for (let q in respostasCorretas) {
+            let selecionado = document.querySelector(`input[name="${q}"]:checked`);
+            if (selecionado && selecionado.value === respostasCorretas[q]) {
+                acertos++;
+            }
+        }
 
-      document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
+        document.getElementById("resultado").innerText = `Você acertou ${acertos} de ${Object.keys(respostasCorretas).length} questões.`;
     }
-  </script>
-    
+</script>
+
  </section>
 <footer class="site-footer">
     <div class="footer-container">
